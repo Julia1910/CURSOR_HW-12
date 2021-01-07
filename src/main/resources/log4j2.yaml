@@ -1,0 +1,16 @@
+Configuration:
+  packages: "com.cursor"
+  name: Log4j2_Config
+
+  appenders:
+    Console:
+      name: Console_Appender
+      PatternLayout:
+        Pattern: "%msg %xEx{short}%n"
+
+  Loggers:
+    Root:
+      level: all
+      AppenderRef:
+        - ref: Console_Appender
+          level: trace
